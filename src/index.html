@@ -21,6 +21,14 @@
     <div class="container">
       <div class="row">
         <h3>My Google Maps Demo</h3>
+        Owner Address:
+        <input type="text" name="owner">
+
+        Pet Address:
+        <input type="text" name="pet">
+        <button id="register">Register Pet</button>
+        <br/>
+        <br/>
         <div id="map" style="height:400px; width:100%;"></div>
         <br/>
         <br/>
@@ -69,21 +77,23 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALSoclWoJ0JumFIumdbi-Wz3Tws5JW91E&callback=initMap">
     </script>
     <script>
-      var markers = [];
+
+      var map;
+      var uluru;
+      var marker;
+
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
+        uluru = {lat: -25.363, lng: 131.044};
+        map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: uluru
         });
 
-        var marker = new google.maps.Marker({
+        marker = new google.maps.Marker({
           position: uluru,
           map: map,
           id:'asdfasdfasdfasdfasdf'
         });
-
-        markers.push(marker);
 
       }
     </script>

@@ -63,6 +63,13 @@ App = {
 
   bindEvents: function() {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
+
+    $(document).on('click', '#register', App.handleRegister);
+  },
+
+  handleRegister: function() {
+
+    marker.setPosition({lat: -27.463, lng: 136.044});
   },
 
   handleAdopt: function() {
