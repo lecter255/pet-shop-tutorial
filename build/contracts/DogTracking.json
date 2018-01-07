@@ -1,0 +1,207 @@
+{
+  "contract_name": "DogTracking",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "dogCoordLat",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "dogOwner",
+          "type": "address"
+        },
+        {
+          "name": "dogTag",
+          "type": "address"
+        }
+      ],
+      "name": "registerNewDog",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "dogTag",
+          "type": "address"
+        }
+      ],
+      "name": "getDogLocation",
+      "outputs": [
+        {
+          "name": "lat",
+          "type": "int256"
+        },
+        {
+          "name": "long",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "name": "ownerAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "dogToOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "lat",
+          "type": "int256"
+        },
+        {
+          "name": "long",
+          "type": "int256"
+        }
+      ],
+      "name": "saveDogLocation",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "dogCoordLong",
+      "outputs": [
+        {
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "dogOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "dogTag",
+          "type": "address"
+        }
+      ],
+      "name": "NewDogRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogOwnerSet",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040525b60008054600160a060020a03191633600160a060020a03161790555b5b61055e806100316000396000f300606060405236156100965763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166313af4035811461009b57806328b3c222146100ce57806352f4e46c146100ff5780636377327714610138578063893d20e81461016f5780638da5cb5b1461019e578063db3fbb26146101cd578063f819616114610208578063fe18dd1f14610235575b600080fd5b34156100a657600080fd5b6100ba600160a060020a0360043516610266565b604051901515815260200160405180910390f35b34156100d957600080fd5b6100ed600160a060020a0360043516610305565b60405190815260200160405180910390f35b341561010a57600080fd5b6100ba600160a060020a0360043581169060243516610317565b604051901515815260200160405180910390f35b341561014357600080fd5b610157600160a060020a03600435166103f7565b60405191825260208201526040908101905180910390f35b341561017a57600080fd5b61018261048b565b604051600160a060020a03909116815260200160405180910390f35b34156101a957600080fd5b61018261049b565b604051600160a060020a03909116815260200160405180910390f35b34156101d857600080fd5b610182600160a060020a03600435166104aa565b604051600160a060020a03909116815260200160405180910390f35b341561021357600080fd5b6100ba6004356024356104c5565b604051901515815260200160405180910390f35b341561024057600080fd5b6100ed600160a060020a0360043516610520565b60405190815260200160405180910390f35b60008054819033600160a060020a0390811691161461028457600080fd5b600160a060020a038316151561029957600080fd5b5060008054600160a060020a0384811673ffffffffffffffffffffffffffffffffffffffff1983161792839055908116918291167fa1d2149652d81eb35c360c115fc7ac594124cb1ea8a5a33e9a7f5768c62869fb60405160405180910390a3600191505b5b50919050565b60036020526000908152604090205481565b6000805433600160a060020a0390811691161461033357600080fd5b600160a060020a038316151561034857600080fd5b600160a060020a038216151561035d57600080fd5b600160a060020a03808316600090815260016020526040902054161561038257600080fd5b600160a060020a0382811660008181526001602052604090819020805473ffffffffffffffffffffffffffffffffffffffff191693871693841790559091907fe83887a96c8e36f538a987f66e7936a4499f0a09c713d0baf33cee3859df4bab905160405180910390a35060015b5b92915050565b600080600160a060020a038316151561040f57600080fd5b600160a060020a0380841660009081526001602052604090205416151561043557600080fd5b600160a060020a0383811660009081526001602052604090205433821691161461045e57600080fd5b5050600160a060020a0381166000908152600360209081526040808320546002909252909120545b915091565b600054600160a060020a03165b90565b600054600160a060020a031681565b600160205260009081526040902054600160a060020a031681565b600160a060020a0333811660009081526001602052604081205490911615156104ed57600080fd5b50600160a060020a03331660009081526003602090815260408083208590556002909152902081905560015b5b92915050565b600260205260009081526040902054815600a165627a7a72305820fcf3347b85ad9091028e460801ccd8e78d33580bf2bfc39b6592cd507018ba370029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1508628885344
+}
